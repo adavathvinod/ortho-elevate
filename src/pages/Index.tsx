@@ -1,12 +1,70 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { FloatingButtons } from "@/components/FloatingButtons";
+import { HeroSlider } from "@/components/HeroSlider";
+import { ServicesSection } from "@/components/ServicesSection";
+import { ReviewsSection } from "@/components/ReviewsSection";
+import { ClinicTimings } from "@/components/ClinicTimings";
+import { BookingForm } from "@/components/BookingForm";
+import { Award, Users, Calendar, Stethoscope } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
+const stats = [
+  { icon: Calendar, value: "12+", label: "Years Experience" },
+  { icon: Users, value: "10,000+", label: "Happy Patients" },
+  { icon: Award, value: "4.9★", label: "Google Rating" },
+  { icon: Stethoscope, value: "15+", label: "Treatments" },
+];
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {/* Hero Section */}
+      <HeroSlider />
+
+      {/* Stats Section */}
+      <section className="relative -mt-16 z-10">
+        <div className="section-container">
+          <div className="bg-card rounded-2xl shadow-elevated p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-secondary mb-3">
+                  <stat.icon className="w-6 h-6 text-primary" />
+                </div>
+                <p className="text-2xl md:text-3xl font-bold text-foreground">{stat.value}</p>
+                <p className="text-sm text-muted-foreground">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Preview */}
+      <ServicesSection />
+
+      {/* View All Services Button */}
+      <div className="text-center pb-12 bg-background">
+        <Link to="/services">
+          <Button variant="outline" size="lg">
+            View All Services
+          </Button>
+        </Link>
       </div>
+
+      {/* Clinic Timings */}
+      <ClinicTimings />
+
+      {/* Reviews */}
+      <ReviewsSection />
+
+      {/* Booking Form */}
+      <BookingForm />
+
+      <Footer />
+      <FloatingButtons />
     </div>
   );
 };
