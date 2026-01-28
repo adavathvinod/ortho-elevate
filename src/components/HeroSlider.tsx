@@ -85,7 +85,7 @@ export function HeroSlider() {
                 </Button>
               </a>
               <a href="tel:+916281894631">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-foreground gap-2 text-base">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 gap-2 text-base">
                   <Phone className="w-5 h-5" />
                   Call Now
                 </Button>
@@ -95,7 +95,7 @@ export function HeroSlider() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-foreground gap-2 text-base">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 gap-2 text-base">
                   <MapPin className="w-5 h-5" />
                   Get Directions
                 </Button>
