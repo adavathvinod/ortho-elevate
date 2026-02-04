@@ -6,6 +6,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { ClinicTimings } from "@/components/ClinicTimings";
 import { BookingForm } from "@/components/BookingForm";
+import { SEO, physicianSchema, clinicSchema } from "@/components/SEO";
 import { Award, Users, Calendar, Stethoscope } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -17,9 +18,36 @@ const stats = [
   { icon: Stethoscope, value: "15+", label: "Treatments" },
 ];
 
+// Combined structured data for homepage
+const homePageStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    physicianSchema,
+    clinicSchema,
+    {
+      "@type": "WebSite",
+      "name": "Dr. Karthik Manchala Ortho Clinic",
+      "url": "https://drkmortho.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://drkmortho.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+};
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Best Orthopaedic Doctor in Hyderabad"
+        description="Dr. Karthik Manchala - Trusted orthopaedic surgeon in Manikonda, Hyderabad with 12+ years experience. Expert in joint replacement, fracture fixation, arthroscopy & sports injuries. 4.9★ Google rated. Book appointment now!"
+        keywords="orthopaedic doctor hyderabad, bone specialist manikonda, joint replacement surgery hyderabad, knee pain treatment, hip replacement surgeon, fracture treatment telangana, arthroscopy hyderabad, sports injury doctor"
+        canonicalUrl="/"
+        structuredData={homePageStructuredData}
+      />
+      
       <Header />
       
       {/* Hero Section */}

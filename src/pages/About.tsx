@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingButtons } from "@/components/FloatingButtons";
 import { BookingForm } from "@/components/BookingForm";
+import { SEO, physicianSchema, breadcrumbSchema } from "@/components/SEO";
 import { Award, GraduationCap, Stethoscope, Heart, Calendar, CheckCircle2 } from "lucide-react";
 import doctorPortrait from "@/assets/doctor-portrait.png";
 
@@ -19,9 +20,37 @@ const expertise = [
   "Sports Injury Treatment",
 ];
 
+// Structured data for About page
+const aboutPageStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    physicianSchema,
+    breadcrumbSchema([
+      { name: "Home", url: "/" },
+      { name: "About Doctor", url: "/about" }
+    ]),
+    {
+      "@type": "WebPage",
+      "name": "About Dr. Karthik Manchala",
+      "description": "Learn about Dr. Karthik Manchala, an experienced orthopaedic surgeon in Hyderabad specializing in joint replacement and arthroscopy.",
+      "url": "https://drkmortho.com/about",
+      "mainEntity": physicianSchema
+    }
+  ]
+};
+
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="About Dr. Karthik Manchala"
+        description="Dr. Karthik Manchala - Orthopaedic, Joint Replacement & Arthroscopic Surgeon with 12+ years experience. MBBS from CAIMS Karimnagar, DNB Orthopaedics from P.D. Hinduja Hospital Mumbai. Expert in knee & hip replacement, fracture fixation, and sports injuries."
+        keywords="Dr Karthik Manchala, orthopaedic surgeon hyderabad, joint replacement specialist, arthroscopic surgeon manikonda, bone doctor telangana, DNB orthopaedics"
+        canonicalUrl="/about"
+        ogType="profile"
+        structuredData={aboutPageStructuredData}
+      />
+      
       <Header />
 
       {/* Hero Section */}
@@ -34,7 +63,7 @@ const About = () => {
                 <div className="absolute -inset-4 bg-primary/10 rounded-3xl transform rotate-3" />
                 <img
                   src={doctorPortrait}
-                  alt="Dr. Karthik Manchala"
+                  alt="Dr. Karthik Manchala - Orthopaedic, Joint Replacement & Arthroscopic Surgeon in Hyderabad"
                   className="relative rounded-2xl shadow-elevated w-full max-w-md mx-auto"
                 />
                 {/* Experience Badge */}
