@@ -70,7 +70,7 @@ export function HeroSlider() {
               Dr. Karthik Manchala
             </h1>
             <p className="text-xl md:text-2xl font-medium text-primary mb-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              Orthopaedic Specialist
+              Orthopaedic, Joint Replacement & Arthroscopic Surgeon
             </p>
             <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               Trusted Orthopaedic Care with 12+ Years of Experience
