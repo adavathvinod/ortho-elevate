@@ -6,10 +6,8 @@ import { Award, GraduationCap, Stethoscope, Heart, Calendar, CheckCircle2 } from
 import doctorPortrait from "@/assets/doctor-portrait.png";
 
 const credentials = [
-  "MBBS from reputed medical college",
-  "MS Orthopaedics from P.D. Hinduja Hospital, Mumbai",
-  "Fellowship in Joint Replacement Surgery",
-  "Member of Indian Orthopaedic Association",
+  "MBBS from Chalmeda Ananda Rao Institute of Medical Sciences, Karimnagar",
+  "DNB Orthopaedics from P.D. Hinduja Hospital, Mumbai",
 ];
 
 const expertise = [
