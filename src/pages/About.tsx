@@ -54,7 +54,7 @@ const About = () => {
                 Dr. Karthik Manchala
               </h1>
               <p className="text-xl text-primary font-medium mb-4">
-                Senior Orthopaedic Specialist
+                Orthopaedic, Joint Replacement & Arthroscopic Surgeon
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Dr. Karthik Manchala completed his Orthopaedic training at the prestigious 
