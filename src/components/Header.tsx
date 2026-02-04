@@ -25,7 +25,7 @@ export function Header() {
             <img src={logo} alt="KM Ortho Clinic" className="h-10 md:h-12 w-auto" />
             <div className="hidden sm:block">
               <p className="text-sm font-semibold text-foreground leading-tight">Dr. Karthik Manchala</p>
-              <p className="text-xs text-muted-foreground">Orthopaedic Specialist</p>
+              <p className="text-xs text-muted-foreground">Orthopaedic, Joint Replacement & Arthroscopic Surgeon</p>
             </div>
           </Link>
 

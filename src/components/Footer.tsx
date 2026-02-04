@@ -28,7 +28,7 @@ export function Footer() {
               <img src={logo} alt="KM Ortho Clinic" className="h-12 w-auto brightness-0 invert" />
               <div>
                 <p className="font-semibold text-lg">Dr. Karthik Manchala</p>
-                <p className="text-sm text-background/70">Orthopaedic Specialist</p>
+                <p className="text-sm text-background/70">Orthopaedic, Joint Replacement & Arthroscopic Surgeon</p>
               </div>
             </div>
             <p className="text-background/70 text-sm leading-relaxed">
