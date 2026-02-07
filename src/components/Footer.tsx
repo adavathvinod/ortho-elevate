@@ -8,7 +8,7 @@ export function Footer() {
       {/* Map Section */}
       <div className="w-full h-64 md:h-80">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.5!2d78.3750!3d17.3950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRd%20Number%2025%2C%20Alkapur%20Township%2C%20Manikonda%2C%20Hyderabad%2C%20Telangana%20500089!5e0!3m2!1sen!2sin!4v1"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.0751027790006!2d78.36527617493478!3d17.38944318349812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb951072577dc3%3A0x960fb115d604964a!2sDr.%20Karthik%20Manchala%20Ortho%20Clinic!5e1!3m2!1sen!2sin!4v1770474010160!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
