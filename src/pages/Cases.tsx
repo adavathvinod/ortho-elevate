@@ -122,38 +122,38 @@ const Cases = () => {
       {/* Cases Grid */}
       <section className="section-padding">
         <div className="section-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             {cases.map((caseItem) => (
               <article key={caseItem.id} className="medical-card overflow-hidden">
                 {/* Before/After Images */}
-                <div className="grid grid-cols-2 gap-px bg-border">
-                  <figure className="relative aspect-square bg-muted">
+                <div className="grid grid-cols-2 gap-1 bg-border">
+                  <figure className="relative aspect-[4/5] bg-muted">
                     <img 
                       src={caseItem.beforeImage} 
                       alt={`${caseItem.title} - Before Treatment by Dr. Karthik Manchala`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
-                    <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3">
-                      <p className="text-xs font-semibold text-red-400 uppercase tracking-wider">Before Treatment</p>
-                      <p className="text-xs text-white/90 mt-1 line-clamp-2">{caseItem.before}</p>
+                    <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
+                      <p className="text-sm font-semibold text-red-400 uppercase tracking-wider">Before Treatment</p>
+                      <p className="text-sm text-white/90 mt-1 line-clamp-2">{caseItem.before}</p>
                     </figcaption>
                   </figure>
-                  <figure className="relative aspect-square bg-secondary">
+                  <figure className="relative aspect-[4/5] bg-secondary">
                     <img 
                       src={caseItem.afterImage} 
                       alt={`${caseItem.title} - After Recovery by Dr. Karthik Manchala`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
-                    <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3">
-                      <p className="text-xs font-semibold text-green-400 uppercase tracking-wider">After Recovery</p>
-                      <p className="text-xs text-white/90 mt-1 line-clamp-2">{caseItem.after}</p>
+                    <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
+                      <p className="text-sm font-semibold text-green-400 uppercase tracking-wider">After Recovery</p>
+                      <p className="text-sm text-white/90 mt-1 line-clamp-2">{caseItem.after}</p>
                     </figcaption>
                   </figure>
                 </div>
-                <div className="p-5">
-                  <h2 className="font-semibold text-lg text-foreground">{caseItem.title}</h2>
+                <div className="p-6">
+                  <h2 className="font-semibold text-xl text-foreground">{caseItem.title}</h2>
                 </div>
               </article>
             ))}
