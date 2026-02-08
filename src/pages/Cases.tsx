@@ -23,50 +23,38 @@ const cases = [
   {
     id: 1,
     title: "Total Knee Replacement",
-    before: "Severe knee arthritis with limited mobility",
-    after: "Full range of motion restored",
-    beforeImage: caseKneeBefore,
-    afterImage: caseKneeAfter,
+    description: "Successful knee replacement surgery restoring full mobility",
+    image: caseKneeAfter,
   },
   {
     id: 2,
     title: "Hip Joint Replacement",
-    before: "Chronic hip pain affecting daily activities",
-    after: "Pain-free movement achieved",
-    beforeImage: caseHipBefore,
-    afterImage: caseHipAfter,
+    description: "Total hip arthroplasty for pain-free movement",
+    image: caseHipAfter,
   },
   {
     id: 3,
     title: "Fracture Fixation",
-    before: "Complex fracture requiring surgical intervention",
-    after: "Complete bone healing and recovery",
-    beforeImage: caseFractureBefore,
-    afterImage: caseFractureAfter,
+    description: "Surgical fixation ensuring complete bone healing",
+    image: caseFractureAfter,
   },
   {
     id: 4,
     title: "ACL Reconstruction",
-    before: "Torn ACL from sports injury",
-    after: "Return to sports activities",
-    beforeImage: caseAclBefore,
-    afterImage: caseAclAfter,
+    description: "Ligament reconstruction for return to active lifestyle",
+    image: caseAclAfter,
   },
   {
     id: 5,
     title: "Shoulder Arthroscopy",
-    before: "Rotator cuff tear with shoulder pain",
-    after: "Restored shoulder function",
-    beforeImage: caseShoulderBefore,
-    afterImage: caseShoulderAfter,
+    description: "Minimally invasive repair for restored shoulder function",
+    image: caseShoulderAfter,
   },
   {
     id: 6,
     title: "Spine Surgery",
-    before: "Chronic back pain from disc herniation",
-    after: "Pain relief and improved mobility",
-    beforeImage: caseSpineBefore,
-    afterImage: caseSpineAfter,
+    description: "Disc surgery for lasting pain relief and mobility",
+    image: caseSpineAfter,
   },
 ];
 
@@ -125,35 +113,17 @@ const Cases = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             {cases.map((caseItem) => (
               <article key={caseItem.id} className="medical-card overflow-hidden">
-                {/* Before/After Images */}
-                <div className="grid grid-cols-2 gap-1 bg-border">
-                  <figure className="relative aspect-[4/5] bg-muted">
-                    <img 
-                      src={caseItem.beforeImage} 
-                      alt={`${caseItem.title} - Before Treatment by Dr. Karthik Manchala`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
-                      <p className="text-sm font-semibold text-red-400 uppercase tracking-wider">Before Treatment</p>
-                      <p className="text-sm text-white/90 mt-1 line-clamp-2">{caseItem.before}</p>
-                    </figcaption>
-                  </figure>
-                  <figure className="relative aspect-[4/5] bg-secondary">
-                    <img 
-                      src={caseItem.afterImage} 
-                      alt={`${caseItem.title} - After Recovery by Dr. Karthik Manchala`}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
-                      <p className="text-sm font-semibold text-green-400 uppercase tracking-wider">After Recovery</p>
-                      <p className="text-sm text-white/90 mt-1 line-clamp-2">{caseItem.after}</p>
-                    </figcaption>
-                  </figure>
-                </div>
+                <figure className="relative aspect-[4/5] bg-muted">
+                  <img 
+                    src={caseItem.image} 
+                    alt={`${caseItem.title} - X-ray by Dr. Karthik Manchala`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </figure>
                 <div className="p-6">
-                  <h2 className="font-semibold text-xl text-foreground">{caseItem.title}</h2>
+                  <h2 className="font-semibold text-xl text-foreground mb-2">{caseItem.title}</h2>
+                  <p className="text-muted-foreground text-sm">{caseItem.description}</p>
                 </div>
               </article>
             ))}
