@@ -9,6 +9,7 @@ import doctorPortrait from "@/assets/doctor-portrait.png";
 const credentials = [
   "MBBS from Chalmeda Ananda Rao Institute of Medical Sciences, Karimnagar",
   "DNB Orthopaedics from P.D. Hinduja Hospital, Mumbai",
+  "Observership in Joint Replacement Surgery at Sunshine Hospitals",
 ];
 
 const expertise = [
